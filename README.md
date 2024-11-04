@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GitHub Portfolio
 
-## Getting Started
+This is a personal portfolio website built with [Next.js](https://nextjs.org/) and the GitHub API, designed to showcase my skills, GitHub profile, and projects in a dark/light mode interface.
 
-First, run the development server:
+## Features
 
-```bash
+- **Dynamic GitHub Data**: Fetches and displays my GitHub profile information and repositories using the GitHub API.
+- **Responsive Design**: Fully responsive layout, adjusting seamlessly across all device sizes.
+- **Dark/Light Mode**: Switch between dark and light themes for user comfort.
+- **Technology Stack**: Showcases key technologies used with icon-based visualizations.
+
+## Preview
+
+![Screenshot](link_to_screenshot_image_here)
+
+## Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Desmet-Lars/PortfolioGen.git
+   cd PortfolioGen
+Install dependencies:
+
+bash
+Copy code
+npm install
+Run the development server:
+
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 to view the project in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Usage
+GitHub Profile Data
+The app uses the GitHub API to fetch data about my profile and public repositories.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Ensure you have internet access while using the app, as it fetches real-time data from GitHub.
+To change the GitHub profile being fetched, modify the username in the fetchData function within the Portfolio component.
+Skills Showcased
+The portfolio highlights my knowledge in:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+JavaScript (React, Node.js, etc.)
+Python
+HTML & CSS
+Git & GitHub
+And more...
+Contact
+Email: desmetlars5@gmail.com
+LinkedIn: Your LinkedIn Profile
+Twitter: Your Twitter Profile
+License
+This project is open-source and available under the MIT License. See the LICENSE file for more details.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2024 Lars Desmet

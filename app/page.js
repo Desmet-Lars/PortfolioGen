@@ -108,28 +108,28 @@ const Portfolio = () => {
 
     </div>
     {/* Footer Section */}
-<footer className={`w-full p-6 text-center ${darkMode ? 'bg-gray-800 text-gray-300 shadow-lg' : 'bg-gray-200 text-gray-800 shadow-lg'}`}>
-  <p className="mb-4 text-lg">
-    This website is live-updated using the GitHub API to fetch data about my projects and profile.
-  </p>
-  <h2 className="text-2xl font-bold mb-2">Contact Me</h2>
-  <ul className="list-none mb-4 space-y-2">
-    <li>
-      Email: <a href="mailto:your-email@example.com" className="text-blue-600 hover:underline">your-email@example.com</a>
-    </li>
-    <li>
-      LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline flex items-center justify-center">
-        <FaLinkedin className="mr-1" /> LinkedIn Profile
-      </a>
-    </li>
-    <li>
-      Twitter: <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline flex items-center justify-center">
-        <FaTwitter className="mr-1" /> Twitter Profile
-      </a>
-    </li>
-  </ul>
-  <p className="text-sm">© {new Date().getFullYear()} Your Name. All rights reserved.</p>
-</footer>
+        <footer className={`w-full p-6 text-center ${darkMode ? 'bg-gray-800 text-gray-300 shadow-lg' : 'bg-gray-200 text-gray-800 shadow-lg'}`}>
+        <p className="mb-4 text-lg">
+            This website is live-updated using the GitHub API to fetch data about my projects and profile.
+        </p>
+        <h2 className="text-2xl font-bold mb-2">Contact Me</h2>
+        <ul className="list-none mb-4 space-y-2">
+            <li>
+            Email: <a href="mailto:your-email@example.com" className="text-blue-600 hover:underline">desmetlars5@gmail.com</a>
+            </li>
+            <li>
+            LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline flex items-center justify-center">
+                <FaLinkedin className="mr-1" /> LinkedIn Profile
+            </a>
+            </li>
+            <li>
+            Twitter: <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline flex items-center justify-center">
+                <FaTwitter className="mr-1" /> Twitter Profile
+            </a>
+            </li>
+        </ul>
+        <p className="text-sm">© {new Date().getFullYear()} Lars Desmet. All rights reserved.</p>
+        </footer>
     </>
   );
 };
