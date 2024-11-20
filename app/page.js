@@ -120,16 +120,6 @@ const Portfolio = () => {
             <li>
             Email: <a href="mailto:your-email@example.com" className="text-blue-600 hover:underline">desmetlars5@gmail.com</a>
             </li>
-            <li>
-            LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline flex items-center justify-center">
-                <FaLinkedin className="mr-1" /> LinkedIn Profile
-            </a>
-            </li>
-            <li>
-            Twitter: <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline flex items-center justify-center">
-                <FaTwitter className="mr-1" /> Twitter Profile
-            </a>
-            </li>
         </ul>
         <p className="text-sm">© {new Date().getFullYear()} Lars Desmet. All rights reserved.</p>
         </footer>
