@@ -121,7 +121,13 @@ const Portfolio = () => {
             Email: <a href="mailto:your-email@example.com" className="text-blue-600 hover:underline">desmetlars5@gmail.com</a>
             </li>
             <li>
-            <FaGithub className="text-4xl text-black mb-2" />github: <a href="https://github.com/Desmet-Lars" className="text-blue-600 hover:underline">Desmet-Lars</a>
+            <div className="flex items-center justify-center space-x-2">
+                <FaGithub className="text-4xl text-black mb-2" />
+                <span>
+                    GitHub: <a href="https://github.com/Desmet-Lars" className="text-blue-600 hover:underline">Desmet-Lars</a>
+                </span>
+            </div>
+
             </li>
         </ul>
         <p className="text-sm">© {new Date().getFullYear()} Lars Desmet. All rights reserved.</p>
