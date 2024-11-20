@@ -3,18 +3,20 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Head from 'next/head';
 import { FaJs, FaReact, FaNodeJs, FaPython, FaCss3Alt, FaHtml5, FaGit, FaGithub, FaAngular, FaJava, FaPhp, FaStar, FaCodeBranch, FaClock } from 'react-icons/fa';
+import { SiNextdotjs } from 'react-icons/si';
+
 import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Portfolio = () => {
   const [profile, setProfile] = useState(null);
   const [repos, setRepos] = useState([]);
   const [darkMode, setDarkMode] = useState(false);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         const profileResponse = await axios.get('https://api.github.com/users/Desmet-Lars');
         setProfile(profileResponse.data);
+        console.log(profileResponse.data)
 
         const reposResponse = await axios.get(`https://api.github.com/users/Desmet-Lars/repos`);
         setRepos(reposResponse.data);
@@ -42,7 +44,7 @@ const Portfolio = () => {
         Toggle {darkMode ? 'Light' : 'Dark'} Mode
         </button>
 
-      <h1 className="text-3xl sm:text-5xl font-extrabold mb-4 text-center">{profile.login}'{profile.login.endsWith('s') ? '' : 's'} GitHub Portfolio</h1>
+      <h1 className="text-3xl sm:text-5xl font-extrabold mb-4 text-center">{profile.login}'{profile.login.endsWith('s') ? '' : 's'} Portfolio</h1>
       <img src={profile.avatar_url} alt={`Profile Picture of ${profile.name}`} className="w-32 h-32 rounded-full border-4 border-gray-300 shadow-lg mb-6 dark:border-gray-700" />
       <p className="text-lg mb-4 italic text-center">{profile.bio || 'No bio available'}</p>
 
@@ -61,7 +63,8 @@ const Portfolio = () => {
             { icon: <FaGithub className="text-4xl text-black mb-2" />, label: 'GitHub' },
             { icon: <FaAngular className="text-4xl text-red-600 mb-2" />, label: 'Angular' },
             { icon: <FaPhp className="text-4xl text-blue-600 mb-2" />, label: 'PHP' },
-            { icon: <FaJava className="text-4xl text-red-600 mb-2" />, label: 'Java' }
+            { icon: <FaJava className="text-4xl text-red-600 mb-2" />, label: 'Java' },
+            { icon: <SiNextdotjs className="text-4xl text-black mb-2" />, label: 'Next.js' }
           ].map((skill, index) => (
             <li key={index} className={`flex flex-col items-center p-4 rounded-lg shadow-md ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} hover:shadow-xl transition-shadow duration-300`}>
               {skill.icon}
