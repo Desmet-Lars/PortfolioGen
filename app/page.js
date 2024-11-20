@@ -118,7 +118,7 @@ const Portfolio = () => {
         <h2 className="text-2xl font-bold mb-2">Contact Me</h2>
         <ul className="list-none mb-4 space-y-2">
             <li>
-            Email: <a href="mailto:your-email@example.com" className="text-blue-600 hover:underline">desmetlars5@gmail.com</a>
+            Email: <a href="mailto:desmetlars5@gmail.com" className="text-blue-600 hover:underline">desmetlars5@gmail.com</a>
             </li>
             <li>
             <div className="flex items-center justify-center space-x-2">
