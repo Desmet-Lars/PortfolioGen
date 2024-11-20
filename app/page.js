@@ -50,7 +50,7 @@ const Portfolio = () => {
       <section className="mb-8 w-full">
         <h2 className="text-2xl sm:text-4xl font-semibold mb-4">Skills</h2>
         <ul className="grid grid-cols-2 sm:grid-cols-6 gap-4">
-            {[
+          {[
             { icon: <FaJs className="text-4xl text-yellow-500 mb-2" />, label: 'JavaScript' },
             { icon: <FaReact className="text-4xl text-blue-500 mb-2" />, label: 'React' },
             { icon: <FaNodeJs className="text-4xl text-green-500 mb-2" />, label: 'Node.js' },
@@ -63,20 +63,14 @@ const Portfolio = () => {
             { icon: <FaPhp className="text-4xl text-blue-600 mb-2" />, label: 'PHP' },
             { icon: <FaJava className="text-4xl text-red-600 mb-2" />, label: 'Java' },
             { icon: <SiNextdotjs className="text-4xl text-black mb-2" />, label: 'Next.js' }
-            ].map((skill, index) => (
-            <li
-                key={index}
-                className={`flex flex-col items-center p-4 rounded-lg shadow-md
-                ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}
-                hover:shadow-xl transition-shadow duration-300
-                ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-200'}`}
-            >
-                {skill.icon}
-                <span>{skill.label}</span>
+          ].map((skill, index) => (
+            <li key={index} className={`flex flex-col items-center p-4 rounded-lg shadow-md ${darkMode ? 'bg-gray-800' : 'bg-gray-100'} hover:shadow-xl transition-shadow duration-300`}>
+              {skill.icon}
+              <span>{skill.label}</span>
             </li>
-            ))}
+          ))}
         </ul>
-        </section>
+      </section>
 
       {/* Repositories Section */}
       <section className="mb-8 w-full">
