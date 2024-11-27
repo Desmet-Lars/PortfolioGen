@@ -13,7 +13,7 @@ import Contact from '@/components/Contact';
 const Portfolio = () => {
   const [profile, setProfile] = useState(null);
   const [repos, setRepos] = useState([]);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
