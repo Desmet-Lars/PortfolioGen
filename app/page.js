@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import Header from '../components/Header';
-import Skills from '../components/Skills';
-import Repositories from '../components/Repositories';
-import Footer from '../components/Footer';
-import SkeletonLoader from '../components/SkeletonLoader';
-import Contact from '../components/Contact';
+import Header from '@/components/Header';
+import Skills from '@/components/Skills';
+import Repositories from '@/components/Repositories';
+import Footer from '@/components/Footer';
+import SkeletonLoader from '@/components/SkeletonLoader';
+import Contact from '@/components/Contact';
 
 const Portfolio = () => {
   const [profile, setProfile] = useState(null);
