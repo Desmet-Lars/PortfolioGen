@@ -43,17 +43,70 @@ const Portfolio = () => {
       </Head>
 
       {/* Main container with smooth background color transition */}
-      <div className={`min-h-screen ${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
-        <Header profile={profile} darkMode={darkMode} toggleTheme={() => setDarkMode(!darkMode)} />
+      <motion.div
+        className={`min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-black'}`}
+        animate={{ backgroundColor: darkMode ? '#1f2937' : '#f9fafb' }}
+        transition={{ duration: 0.5 }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: false }}
+        >
+          <Header profile={profile} darkMode={darkMode} toggleTheme={() => setDarkMode(!darkMode)} />
+        </motion.div>
 
-        <main className="p-8">
-          <Skills darkMode={darkMode} />
-          <Repositories repos={repos} darkMode={darkMode} />
-          <Contact darkMode={darkMode} />
+        <main className="p-8 md:p-16">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0, transition: { duration: 0.5, staggerChildren: 0.2 } },
+            }}
+            className="space-y-12"
+          >
+            {/* Skills Section with Scroll Animation */}
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: false }}
+            >
+              <Skills darkMode={darkMode} />
+            </motion.div>
+
+            {/* Repositories Section with Scroll Animation */}
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: false }}
+            >
+              <Repositories repos={repos} darkMode={darkMode} />
+            </motion.div>
+
+            {/* Contact Section with Scroll Animation */}
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: false }}
+            >
+              <Contact darkMode={darkMode} />
+            </motion.div>
+          </motion.div>
         </main>
 
-        <Footer profile={profile} darkMode={darkMode} />
-      </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Footer profile={profile} darkMode={darkMode} />
+        </motion.div>
+      </motion.div>
     </>
   );
 };

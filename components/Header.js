@@ -14,6 +14,7 @@ const Header = ({ profile, darkMode, toggleTheme }) => (
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
+      viewport={{ once: false }}
     >
       {profile.login}'s GitHub Portfolio
     </motion.h1>
@@ -24,6 +25,7 @@ const Header = ({ profile, darkMode, toggleTheme }) => (
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ duration: 1 }}
+      viewport={{ once: false }}
     />
   </header>
 );
